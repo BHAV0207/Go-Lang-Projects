@@ -30,7 +30,8 @@ func getShortUrl(str string) string {
 }
 
 func createShortHandler(w http.ResponseWriter, r *http.Request) {
-	// fmt.Fprintf(w, "Welcome to my URL shortener!")
+	fmt.Println("Inside createShortHandler")
+
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 		return
